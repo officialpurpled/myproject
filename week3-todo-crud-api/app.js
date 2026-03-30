@@ -2,6 +2,10 @@ require("dotenv").config()
 
 const express = require('express');
 const app = express();
+
+const cors = require('cors');
+
+app.use(cors()); // Enable CORS for all routes
 app.use(express.json()); // Parse JSON bodies
 
 let todos = [
